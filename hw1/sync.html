@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synchronization</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Operating Systems</h1>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="processes.html">Processes</a>
+      <a href="sync.html" aria-current="page">Synchronization</a>
+      <a href="deadlock.html">Deadlock</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Why processes must coordinate</h2>
+    <p>When processes share data, the result can depend on which one acts first. This is a race condition, and it can corrupt data. The part of a program that touches shared data is its critical section, and only one process should be in it at a time.</p>
+
+    <figure>
+      <img src="img/monitor.jpg" alt="Schematic of a monitor: an oval holding shared data, a row of operations, and initialization code, with a queue of waiting processes lined up outside the entry.">
+      <figcaption>A monitor: only one process at a time can run inside it, and the rest wait in the entry queue.</figcaption>
+    </figure>
+
+    <h2>Tools for safe sharing</h2>
+    <ul>
+      <li><strong>Mutex:</strong> a lock that is either locked or unlocked. A process calls <code>lock()</code> before its critical section and <code>unlock()</code> after.</li>
+      <li><strong>Semaphore:</strong> a counter that saves wakeup signals, used with <code>down()</code> and <code>up()</code>.</li>
+      <li><strong>Message passing:</strong> processes on different computers share data with <code>send()</code> and <code>receive()</code>.</li>
+      <li><strong>Monitor:</strong> bundles shared data with the operations that use it, so only one process can be inside at a time while the others wait in line.</li>
+    </ul>
+
+    <div class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li>Tanenbaum, A. S., &amp; Bos, H. (2014). <a href="https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003311/9780133591620">Modern Operating Systems</a> (4th ed.). Pearson.</li>
+        <li><a href="https://en.wikipedia.org/wiki/Race_condition">Race condition (Wikipedia)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Semaphore_(programming)">Semaphore (Wikipedia)</a></li>
+        <li>Diagram: <a href="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/5_Synchronization.html">Operating Systems course notes, Chapter 5: Synchronization (University of Illinois Chicago)</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Jason Campos. All rights reserved.</p>
+    <p>This site is for academic purposes only.</p>
+    <p>CST 336 Internet Programming.</p>
+    <img src="img/csumb.jpg" alt="CSUMB logo">
+  </footer>
+</body>
+</html>

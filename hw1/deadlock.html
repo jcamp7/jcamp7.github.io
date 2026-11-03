@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deadlock</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Operating Systems</h1>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="processes.html">Processes</a>
+      <a href="sync.html">Synchronization</a>
+      <a href="deadlock.html" aria-current="page">Deadlock</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>What is deadlock?</h2>
+    <p>Deadlock is when a group of processes are all stuck, each waiting for another one in the group to do something.</p>
+
+    <figure>
+      <img src="img/deadlock.png" width="600" height="260" alt="Resource allocation graph with two processes and two resources. Each process holds one resource and requests the other, forming a cycle.">
+      <figcaption>A cycle in a resource allocation graph means deadlock.</figcaption>
+    </figure>
+
+    <h2>Four conditions</h2>
+    <p>Deadlock can only happen if four conditions are met:</p>
+    <ul>
+      <li><strong>Mutual exclusion:</strong> only one process can use a resource at a time.</li>
+      <li><strong>Hold-and-wait:</strong> a process can keep what it has while asking for more.</li>
+      <li><strong>No preemption:</strong> the system can’t force a process to give a resource back. Only the process can release it.</li>
+      <li><strong>Circular wait:</strong> processes form a loop where each one needs something the next one has.</li>
+    </ul>
+
+    <h2>Handling deadlock</h2>
+    <ul>
+      <li><strong>Ostrich algorithm:</strong> ignore the problem and hope it never happens.</li>
+      <li><strong>Detection and recovery:</strong> let deadlock happen, notice it, then fix it, for example by ending a process.</li>
+      <li><strong>Avoidance:</strong> the system checks each request first and only agrees if it can’t lead to deadlock. The banker’s algorithm does this.</li>
+      <li><strong>Prevention:</strong> design the system so at least one of the four conditions can never be true.</li>
+    </ul>
+
+    <aside>
+      <p><strong>Tip:</strong> numbering resources and requesting them in order prevents circular wait.</p>
+    </aside>
+
+    <div class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li>Tanenbaum, A. S., &amp; Bos, H. (2014). <a href="https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003311/9780133591620">Modern Operating Systems</a> (4th ed.). Pearson.</li>
+        <li><a href="https://en.wikipedia.org/wiki/Deadlock_(computer_science)">Deadlock (Wikipedia)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Banker%27s_algorithm">Banker's algorithm (Wikipedia)</a></li>
+        <li>Diagram: <a href="https://www.gatevidyalay.com/deadlock-in-os-conditions-for-deadlock/">Deadlock in OS: Conditions for Deadlock (Gate Vidyalay)</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Jason Campos. All rights reserved.</p>
+    <p>This site is for academic purposes only.</p>
+    <p>CST 336 Internet Programming.</p>
+    <img src="img/csumb.jpg" alt="CSUMB logo">
+  </footer>
+</body>
+</html>

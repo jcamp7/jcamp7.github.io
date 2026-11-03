@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  background-color: #f3f6fb;
+  color: #1b2a41;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+header {
+  background-color: #12315a;
+  color: #ffffff;
+  padding: 1.25rem 1rem 0;
+  text-align: center;
+  border-bottom: 4px solid #f5a524;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  letter-spacing: 0.08em; /* new property */
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+nav a {
+  padding: 0.75rem 1.25rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+  transition: background-color 0.2s ease; /* new property */
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  background-color: #f5a524;
+  color: #12315a;
+}
+
+a:focus-visible {
+  outline: 3px solid #0b6bcb;
+  outline-offset: 2px;
+}
+
+nav a:focus-visible {
+  outline-color: #ffffff;
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #12315a;
+  text-transform: capitalize; /* new property */
+}
+
+main a {
+  color: #0b57a8;
+}
+
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #c5d3e8;
+  border-radius: 0.5rem;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #44546a;
+}
+
+/* Multi-column layout (cards wrap on small screens) */
+.columns {
+  display: grid; /* new property */
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); /* new property */
+  gap: 1.5rem;
+}
+
+article {
+  background-color: #ffffff;
+  padding: 0 1.25rem 1rem;
+  border-top: 4px solid #12315a;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(18, 49, 90, 0.18); /* new property */
+}
+
+aside {
+  background-color: #fff4dc;
+  border-left: 5px solid #f5a524;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+}
+
+code {
+  background-color: #e3eaf5;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: "Courier New", monospace;
+}
+
+.sources {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #c5d3e8;
+  font-size: 0.9rem;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #12315a;
+  color: #ffd98a;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+footer img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav a {
+    transition: none;
+  }
+}
+

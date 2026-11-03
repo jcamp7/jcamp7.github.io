@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+   <h1>Operating Systems</h1>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="processes.html" aria-current="page">Processes</a>
+      <a href="sync.html">Synchronization</a>
+      <a href="deadlock.html">Deadlock</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>What is a process?</h2>
+    <p>A process is a running program. The OS switches between processes so quickly that many seem to run at once, even on one CPU core. Each switch is called a context switch.</p>
+
+    <figure>
+      <img src="img/processes.jpg" width="600" height="260" alt="Process state diagram: a new process is admitted to ready, ready moves to running, running can return to ready, move to waiting for I/O, or terminate, and waiting returns to ready.">
+      <figcaption>How a process moves between states.</figcaption>
+    </figure>
+
+    <h2>Process states</h2>
+    <div class="columns">
+      <article>
+        <h3>Running</h3>
+        <p>The process is using the CPU right now.</p>
+      </article>
+      <article>
+        <h3>Ready</h3>
+        <p>The process could run, but the CPU is busy with another one.</p>
+      </article>
+      <article>
+        <h3>Waiting</h3>
+        <p>The process is waiting for something, such as a file or keyboard input.</p>
+      </article>
+    </div>
+
+    <h2>Scheduling</h2>
+    <p>The scheduler chooses which ready process runs next. Round-robin gives each process a short turn, and priority scheduling lets important processes go first. A new process can start when a program is launched or when a running process calls <code>fork()</code>.</p>
+
+    <aside>
+      <p><strong>Threads:</strong> one process can have several threads that share its memory, which makes sharing data easy.</p>
+    </aside>
+
+    <div class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li>Tanenbaum, A. S., &amp; Bos, H. (2014). <a href="https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003311/9780133591620">Modern Operating Systems</a> (4th ed.). Pearson.</li>
+        <li><a href="https://en.wikipedia.org/wiki/Process_(computing)">Process (Wikipedia)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Scheduling_(computing)">Scheduling (Wikipedia)</a></li>
+        <li>Diagram: <a href="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/3_Processes.html">Operating Systems course notes, Chapter 3: Processes (University of Illinois Chicago)</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Jason Campos. All rights reserved.</p>
+    <p>This site is for academic purposes only.</p>
+    <p>CST 336 Internet Programming.</p>
+    <img src="img/csumb.jpg" alt="CSUMB logo">
+  </footer>
+</body>
+</html>
