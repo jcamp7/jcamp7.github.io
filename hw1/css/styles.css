@@ -7,11 +7,11 @@ body {
 }
 
 header {
-  background-color: #12315a;
+  background-color: #3a228a;
   color: #ffffff;
   padding: 1.25rem 1rem 0;
   text-align: center;
-  border-bottom: 4px solid #f5a524;
+  border-bottom: 4px solid #2a8e27;;
 }
 
 h1 {
@@ -38,12 +38,12 @@ nav a {
 
 nav a:hover,
 nav a[aria-current="page"] {
-  background-color: #f5a524;
-  color: #12315a;
+  background-color: #2a8e27;
+  color: white;
 }
 
 a:focus-visible {
-  outline: 3px solid #0b6bcb;
+  outline: 3px solid #6e49c4;
   outline-offset: 2px;
 }
 
@@ -85,7 +85,7 @@ figcaption {
   color: #44546a;
 }
 
-/* Multi-column layout (cards wrap on small screens) */
+/* Multi-column layout */
 .columns {
   display: grid; /* new property */
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); /* new property */
@@ -123,8 +123,8 @@ code {
 
 footer {
   padding: 1rem;
-  background-color: #12315a;
-  color: #ffd98a;
+  background-color: #3a228a;
+  color: white;
   font-size: 0.875rem;
   text-align: center;
 }
