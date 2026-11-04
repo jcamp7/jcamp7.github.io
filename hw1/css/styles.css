@@ -11,7 +11,7 @@ header {
   color: #ffffff;
   padding: 1.25rem 1rem 0;
   text-align: center;
-  border-bottom: 4px solid #2a8e27;;
+  border-bottom: 4px solid #1e7a1e;
 }
 
 h1 {
@@ -38,7 +38,7 @@ nav a {
 
 nav a:hover,
 nav a[aria-current="page"] {
-  background-color: #2a8e27;
+  background-color: #1e7a1e;
   color: white;
 }
 
@@ -60,7 +60,7 @@ main {
 h2,
 h3 {
   font-family: Georgia, "Times New Roman", serif;
-  color: #12315a;
+  color: #3a228a;
   text-transform: capitalize; /* new property */
 }
 
@@ -95,7 +95,7 @@ figcaption {
 article {
   background-color: #ffffff;
   padding: 0 1.25rem 1rem;
-  border-top: 4px solid #12315a;
+  border-top: 4px solid #3a228a;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(18, 49, 90, 0.18); /* new property */
 }
@@ -144,4 +144,3 @@ footer p {
     transition: none;
   }
 }
-
