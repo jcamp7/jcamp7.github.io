@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Rick and Morty Characters</h1>
+    <p>Search characters by name and species.</p>
+  </header>
+
+  <main>
+    <form id="searchForm">
+      <label for="name">Character Name:</label>
+      <input type="text" id="name" name="name" placeholder="e.g., Rick">
+
+      <label for="species">Species:</label>
+      <select id="species" name="species">
+        <option value="">All</option>
+        <option value="Human">Human</option>
+        <option value="Alien">Alien</option>
+        <option value="Humanoid">Humanoid</option>
+        <option value="Robot">Robot</option>
+        <option value="Animal">Animal</option>
+        <option value="Mythological Creature">Mythological Creature</option>
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="message"></p>
+    <div id="results"></div>
+  </main>
+
+  <footer>
+      <p>&copy; 2026 Jason Campos. All rights reserved.</p>
+      <p>This site is for academic purposes only.</p>
+      <p>CST 336 Internet Programming.</p>
+      <img src="img/csumb.jpg" alt="CSUMB logo">
+    </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
